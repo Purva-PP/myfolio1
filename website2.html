@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            background-color: #111;
+            color: white;
+        }
+        
+        
+        .sidebar {
+            width: 120px;
+            background: #222;
+            position: fixed;
+            height: 100%;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #444;
+        }
+        #main {
+            margin-left: 120px;
+            scroll-padding-top: -50px;
+        }
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: middle;
+            text-align: center;
+            height: 130vh;
+            position: relative;
+        }
+
+        .hero-section1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: middle;
+            text-align: center;
+            height: 130vh;
+            position: relative;
+            top: 350px;
+        }
+
+        .hero-section img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        section {
+            padding: 60px 40px;
+        }
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 70px;
+            padding: 30px;
+        }
+        .work-item {
+            background: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            height: 220px
+        }
+        .work-item:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            margin-top: 40px;
+        }
+        .skill-bar {
+            background: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+        .skill-bar div {
+            height: 20px;
+            background: #f6aa2f;
+            text-align: right;
+            line-height: 20px;
+            padding-right: 10px;
+            color: black;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .skill-bar:hover div {
+            background: #f39c12;
+            transform: scaleX(1.05);
+        }
+        .resume-bar {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .resume-bar a {
+            background: #f6aa2f;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .resume-bar a:hover {
+            background: #e67e22;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0;
+            }
+            .sidebar a {
+                padding: 10px 15px;
+            }
+            #main {
+                margin-left: 0;
+            }
+            .hero-section {
+                height: 80vh;
+                padding: 10px;
+            }
+            .works-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            
+            }
+            section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <a href="#home"><i class="fa fa-home"></i> HOME</a>
+        <a href="#about"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="#works"><i class="fa fa-briefcase"></i> WORKS</a>
+        <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+    </nav>
+    
+    <div id="main">
+        <header class="hero-section">
+            <img src="https://img.freepik.com/free-photo/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands_197531-343.jpg" alt="Portfolio Background">
+           <div class="hero-section1">
+            <h1 style="font-size: xxxxxx-large; font-family: Playwrite;">Welcome to My Portfolio</h1><br>
+            <h2 >Hi, I,m Purva Patil</h2>
+           <p>(An aspiring Communication Designer)</p>
+            </div>
+        </header>
+
+        <hr style="width:90%; margin: centre 20%;">
+        
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hi, I'm Purva Patil, a passionate visual communication design student with a love for crafting meaningful and visually compelling stories. I specialize in branding, typography, and digital design, using tools like Adobe Creative Suite, Figma, and Blender to bring ideas to life. I'm excited to continue growing as a designer and to collaborate on projects that make a lasting impact.</p>
+
+            <br>
+            <br>
+            <br>
+            <h2>Skills</h2>
+            <div class="skill-bar"><div style="width: 90%">Illustrator 90%</div></div>
+            <div class="skill-bar"><div style="width: 85%">Photoshop 85%</div></div>
+            <div class="skill-bar"><div style="width: 82%">After Effects 82%</div></div>
+            <div class="skill-bar"><div style="width: 77%">Premiere-Pro 77%</div></div>
+            <div class="skill-bar"><div style="width: 73%">Indesign 73%</div></div>
+            <div class="skill-bar"><div style="width: 70%">Photography 70%</div></div>
+            <div class="skill-bar"><div style="width: 63%">Blender 63%</div></div>
+            
+
+            <br>
+            <br>
+            <br>
+            <h3>Education</h3>
+            <p>Currently pursuing Bachelor of Design(hons.) in Visual Communication Design from Unitedworld Institute of Design</p>
+        </section>
+        
+        <div class="resume-bar">
+            <a href="resume.pdf" target="_blank">Download Resume</a>
+        </div>
+       
+        <hr style="width:50%;text-align:centre;margin: centre 6px;">
+       
+        <section id="works">
+            <h2>My Works</h2>
+            <div class="works-grid">
+                <div class="work-item"><a href="https://th.bing.com/th/id/OIP.NXzIqiXkBtntufgRb-keUgHaEM?rs=1&pid=ImgDetMain" style="text-decoration: none;">Car Animation</a></div>
+                <div class="work-item"><a href="https://th.bing.com/th/id/OIP.NXzIqiXkBtntufgRb-keUgHaEM?rs=1&pid=ImgDetMain" style="text-decoration: none;">Booklet Design</a></div>
+                <div class="work-item"><a href="d:\letterforms and typography poster\2movie posters.pdf" style="text-decoration: none;">Movie poster</a></div>
+                <div class="work-item"><a href="https://th.bing.com/th/id/OIP.NXzIqiXkBtntufgRb-keUgHaEM?rs=1&pid=ImgDetMain" style="text-decoration: none;">Short Film</a></div>
+            </div>
+        </section>
+
+        <hr style="width:50%;text-align:centre;margin: centre 6px;">
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact">
+                <p><i class="fa fa-map-marker margin-right"></i> Gandhinagar, Gujarat, India</p>
+                <p><i class="fa fa-phone text-white margin-right"></i> Phone: +91 7559483269</p>
+                <p><i class="fa fa-envelope test-white bold margin-right"> </i> Email: purvapatil0519@gmail.com</p>
+              </div><br>
+              <p>Let's get in touch. Send me a message:</p>
+              
+              <body>
+              <div class="container mt-3">
+                <form action="/action_page.php">
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="name"  name="name">
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="email"  name="email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="message" name="message">
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+           </div>
+        </section>
+    </div>
+</body>
+    
+    <footer>
+        <p>&copy; 2025 Purva Patil. Creating New Experiences.</p>
+    </footer>
+</body>
+</html>
